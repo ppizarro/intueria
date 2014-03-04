@@ -1,6 +1,6 @@
 Intueria Web Site
 =================
 
-[Intueria][1] is a web site of the architecture and design.
+[Intueria][1] - Architecture and Design Web Site
 
 [1]: http://www.intueria.com.br
