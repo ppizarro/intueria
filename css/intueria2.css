@@ -1,0 +1,288 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:#000;
+}
+
+.tf_bg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+}
+
+.tf_bg img{
+    position:absolute;
+    top:0px; /*-482px;     -(imgh/2 - wh/2) */
+    left:0px;    /* calculate a negative value to center horizontally */
+    width:100%;    /* windowwidth plus negative value of left */
+    /*height:1650px; /* windowheight plus negative value of top */
+    z-index: 1;
+    display:none;
+    outline:none;
+}
+
+.tf_pattern{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:transparent url(../images/pattern.png) repeat top left;
+    z-index:2;
+}
+    
+.tf_content{
+    position:fixed;
+    width: 50%;
+    height: 100%;
+    //position:absolute;
+    top:0px;
+    left:0px;
+    z-index:10;
+    display:none;
+    outline:none;
+    background-color: #9e1b20;
+}
+
+.tf_loading{
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin:-30px 0px 0px -30px;
+    width:60px;
+    height:60px;
+    background:#000 url(../images/loader.gif) no-repeat center center;
+    z-index:999;
+    opacity:0.7;
+}
+
+.tf_next,
+.tf_prev{
+    width:100px;
+    height:14px;
+    position:absolute;
+    top:50%;
+    right:100px;
+    z-index:100;
+    cursor:pointer;
+    background:transparent url(../images/nav.png) no-repeat top left;
+    opacity:0.5;
+}
+
+.tf_next{
+    background-position:0px -14px;
+    margin-top:80px;
+}
+
+.tf_prev{
+    background-position:0px 0px;
+    margin-top:-55px;
+}
+
+.tf_next:hover,
+.tf_prev:hover{
+    opacity:0.9;
+}
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: rgba(255,255,255,.75);
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #9e1b20;
+}
+body {
+  color: #fff;
+  font-size: 100%;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: center;
+  }
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+
+.cover h2 {
+  font-family: source_sans_proextralight, Helvetica, Sans-Serif;
+  font-size: 24px;
+}
+
+.cover p {
+  font-family: source_sans_proextralight, Helvetica, Sans-Serif;
+  font-size:16px;
+  //  padding:0;
+  //  margin:10;
+  width: 80%;
+  //  outline:none;
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  font-family: source_sans_proextralight, Helvetica, Sans-Serif;
+  font-size: 16px;
+}
+
+.int_contact {
+  font-family: source_sans_proregular, Helvetica, Sans-Serif;
+  color: #999;
+  color: rgba(255,255,255, 1);
+}
+
+#int_info p {
+    padding: 0;
+    margin: 0;
+}
+
+.tf_content_horizontal {
+    position:fixed;
+    width: 100%;
+    height: 143px;
+    //position:absolute;
+    top:0px;
+    left:0px;
+    z-index:10;
+    display:none;
+    //outline:none;
+    background-color: #9e1b20;
+}
+
+.content-container-horizontal {
+    display: table;
+    width: 100%;
+}
+
+.content-logo-horizontal {
+    display: table-cell;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 250px;
+}
+
+.content-horizontal {
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    text-align: left;
+}
+
+.content-horizontal h2 {
+  font-family: source_sans_proextralight, Helvetica, Sans-Serif;
+  font-size: 24px;
+  padding: 18px 0px 0px;
+  margin: 0;
+}
+
+.content-horizontal h3 {
+  font-family: source_sans_proregular, Helvetica, Sans-Serif;
+  font-size: 24px;
+  padding: 5px 0px 5px;
+  margin: 0;
+}
+
+.content-horizontal p {
+  font-family: source_sans_proextralight, Helvetica, Sans-Serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 60px;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
+                                                                                                                                                                                132,1         Fim
