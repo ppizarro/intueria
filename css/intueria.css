@@ -67,29 +67,21 @@ body{
     z-index:100;
     cursor:pointer;
     background:transparent url(../images/nav.png) no-repeat top left;
-    opacity:0.5;
+    opacity:0.3;
 }
 
 .tf_prev{
     position:fixed;
-    top:80px;
+    top:20px;
     left:45%;
+    background-position:0px 0px;
 }
 
 .tf_next{
     position:fixed;
     bottom:20px;
     left:45%;
-}
-
-.tf_next{
     background-position:0px -14px;
-    margin-top:80px;
-}
-
-.tf_prev{
-    background-position:0px 0px;
-    margin-top:-55px;
 }
 
 .tf_next:hover,
